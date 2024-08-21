@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Data Diri</title>
+    <link rel="stylesheet" href="bom.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const detail = button.nextElementSibling;
+                    if (detail.style.display === "block") {
+                        detail.style.display = "none";
+                    } else {
+                        detail.style.display = "block";
+                        detail.style.opacity = 0;
+                        setTimeout(() => {
+                            detail.style.opacity = 1;
+                            detail.style.transition = "opacity 0.5s ease-in-out";
+                        }, 10);
+                    }
+                });
+            });
+            document.addEventListener('click', (event) => {
+                const isClickInsideTable = event.target.closest('.container');
+                if (!isClickInsideTable) {
+                    document.querySelectorAll('.detail').forEach(detail => {
+                        detail.style.display = "none";
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="table-container">
+        <section class="container">
+            <table>
+                <tr>
+                    <th colspan="2">Data Diri Sadewa</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="sadewa.jpeg" alt="sadewa" /></td>
+                    <td>
+                        <button>Lihat Detail</button>
+                        <div class="detail" style="display: none;">
+                            <p><strong>Nama:</strong> Adek Sadewa Prawista Wisnawa</p>
+                            <p><strong>Tempat, Tanggal Lahir:</strong> Denpasar, 11 - 10 - 2007</p>
+                            <p><strong>Alamat:</strong> Jl. Kenyeri gg Teratai NO 1</p>
+                            <p><strong>Umur:</strong> 16</p>
+                            <p><strong>Hobby:</strong> gaming</p>
+                            <p><strong>No. Telp:</strong> 085175247610</p>
+                            <p><strong>Sosmed:</strong></p>
+                            <ul>
+                                <li><a href="https://www.instagram.com/prawwista?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram: prawwista</a></li>
+                                <li><a href="https://www.facebook.com/bama.miartha.1/" target="_blank" rel="noopener">Facebook: sadewa</a></li>
+                                <li><a href="https://www.tiktok.com/@xigedzz_ww" target="_blank" rel="noopener">TikTok: igede</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="container">
+            <table>
+                <tr>
+                    <th colspan="2">Data Diri Putra</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="putra2.jpg" alt="putra" /></td>
+                    <td>
+                        <button>Lihat Detail</button>
+                        <div class="detail" style="display: none;">
+                            <p><strong>Nama:</strong> kadek putra sukarma</p>
+                            <p><strong>Tempat, Tanggal Lahir:</strong> denpasar, 09 - 10 - 2007</p>
+                            <p><strong>Alamat:</strong> Jl. muding</p>
+                            <p><strong>Umur:</strong> 16</p>
+                            <p><strong>Hobby:</strong> memikat cewe</p>
+                            <p><strong>No. Telp:</strong> 081779931668</p>
+                            <p><strong>Sosmed:</strong></p>
+                            <ul>
+                                <li><a href="https://www.instagram.com/karma.ptra?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram: putra</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="container">
+            <table>
+                <tr>
+                    <th colspan="2">Data Diri Danis</th>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="danis2.jpeg" alt="danis" /></td>
+                    <td>
+                        <button>Lihat Detail</button>
+                        <div class="detail" style="display: none;">
+                            <p><strong>Nama:</strong> kadek daniswara bala pradana</p>
+                            <p><strong>Tempat, Tanggal Lahir:</strong> sempidi, 10 - 03 - 2008</p>
+                            <p><strong>Alamat:</strong> Jl. bantas</p>
+                            <p><strong>Umur:</strong> 16</p>
+                            <p><strong>Hobby:</strong> megenep</p>
+                            <p><strong>No. Telp:</strong> 087856053716</p>
+                            <p><strong>Sosmed:</strong></p>
+                            <ul>
+                                <li><a href="https://www.instagram.com/kd.dnswra?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram: danis</a></li>
+                                <li><a href="https://www.tiktok.com/@dnswraaaa" target="_blank" rel="noopener">TikTok: danis</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
